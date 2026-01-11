@@ -33,6 +33,68 @@ The library comes with 5 comprehensive test sets that demonstrate various layout
 
 > Note: Aditionally the forbidden routing area is marked red
 
+## Binary Example
+
+The crate includes a binary example that demonstrates how to use the layout library with JSON input files.
+
+### Usage
+
+```bash
+cargo run --example layout_example <input.json> <output.svg>
+```
+
+### Input Format
+
+The example expects a JSON file with the following structure:
+
+```json
+{
+  "nodes": [
+    {
+      "id": "NodeName",
+      "size": {"width": 100.0, "height": 50.0},
+      "position": {"x": 0.0, "y": 0.0},
+      "ports": [
+        {
+          "position": {"x": 100.0, "y": 20.0},
+          "size": {"width": 10.0, "height": 10.0},
+          "port_type": "Output",
+          "id": null
+        }
+      ],
+      "attributes": []
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "source_port": 0,
+      "target_port": 0,
+      "path": []
+    }
+  ]
+}
+```
+
+### Features
+
+- **JSON Input**: Load graph data from JSON files
+- **Automatic Layout**: Applies the full layout algorithm including force-directed positioning and edge routing
+- **SVG Output**: Generates scalable vector graphics for visualization
+- **Port Support**: Handles nodes with input/output ports for precise edge connections
+- **Default Configuration**: Uses sensible defaults for layout parameters
+
+### Example
+
+A sample input file is provided at `examples/example.json` which demonstrates a simple workflow with ports:
+
+```bash
+cargo run --example layout_example examples/example.json workflow.svg
+```
+
+This will generate an SVG file showing a Start → Process1 → Process2 → End workflow with proper port connections.
+
 ## Algorithm
 
 The layout algorithm operates in four distinct phases to produce clean, readable graph layouts:

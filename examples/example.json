@@ -1,0 +1,155 @@
+{
+  "nodes": [
+    {
+      "id": "Start",
+      "size": {
+        "width": 100.0,
+        "height": 50.0
+      },
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "ports": [
+        {
+          "position": {
+            "x": 100.0,
+            "y": 20.0
+          },
+          "size": {
+            "width": 10.0,
+            "height": 10.0
+          },
+          "port_type": "Output",
+          "id": null
+        }
+      ],
+      "attributes": []
+    },
+    {
+      "id": "Process1",
+      "size": {
+        "width": 120.0,
+        "height": 60.0
+      },
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "ports": [
+        {
+          "position": {
+            "x": -10.0,
+            "y": 25.0
+          },
+          "size": {
+            "width": 10.0,
+            "height": 10.0
+          },
+          "port_type": "Input",
+          "id": null
+        },
+        {
+          "position": {
+            "x": 120.0,
+            "y": 25.0
+          },
+          "size": {
+            "width": 10.0,
+            "height": 10.0
+          },
+          "port_type": "Output",
+          "id": null
+        }
+      ],
+      "attributes": []
+    },
+    {
+      "id": "Process2",
+      "size": {
+        "width": 120.0,
+        "height": 60.0
+      },
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "ports": [
+        {
+          "position": {
+            "x": -10.0,
+            "y": 25.0
+          },
+          "size": {
+            "width": 10.0,
+            "height": 10.0
+          },
+          "port_type": "Input",
+          "id": null
+        },
+        {
+          "position": {
+            "x": 120.0,
+            "y": 25.0
+          },
+          "size": {
+            "width": 10.0,
+            "height": 10.0
+          },
+          "port_type": "Output",
+          "id": null
+        }
+      ],
+      "attributes": []
+    },
+    {
+      "id": "End",
+      "size": {
+        "width": 100.0,
+        "height": 50.0
+      },
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "ports": [
+        {
+          "position": {
+            "x": -10.0,
+            "y": 20.0
+          },
+          "size": {
+            "width": 10.0,
+            "height": 10.0
+          },
+          "port_type": "Input",
+          "id": null
+        }
+      ],
+      "attributes": []
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "source_port": 0,
+      "target_port": 0,
+      "path": []
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "source_port": 1,
+      "target_port": 0,
+      "path": []
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "source_port": 1,
+      "target_port": 0,
+      "path": []
+    }
+  ]
+}

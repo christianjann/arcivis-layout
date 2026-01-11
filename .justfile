@@ -29,3 +29,6 @@ doc:
 
 layout-test:
     RUST_LOG=debug cargo test -p arcivis-layout -- --nocapture
+
+example:
+    cargo run --example layout_example examples/example.json output.svg

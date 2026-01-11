@@ -38,13 +38,13 @@ pub trait LayoutEdge {
     fn set_path(&mut self, path: Vec<Position>);
 }
 
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub enum PortType {
     Input,
     Output,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Port {
     pub position: Position, // relative to node position
     pub size: Size,
@@ -52,7 +52,7 @@ pub struct Port {
     pub id: Option<usize>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Node {
     pub id: String,
     pub size: Size,
@@ -89,7 +89,7 @@ impl Node {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Edge {
     pub source: usize,
     pub target: usize,
